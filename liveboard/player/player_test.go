@@ -6,7 +6,9 @@ import (
 )
 
 func TestPlayerCreatesPlayerWithValidData(t *testing.T) {
-	validPlayer, err := player.Create(player.CreateName("John Smith"))
+	var pname player.PName = "John Smith"
+	var phandicap player.PHandicap = 12
+	validPlayer, err := player.Create([])
 
 	want := "John Smith"
 	got := validPlayer.Name()
